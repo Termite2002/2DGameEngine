@@ -1,0 +1,35 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+.vs/2DGameEngine/v17/ipch/AutoPCH/3286969ec83b396d/MAIN.ipch
+.vs/2DGameEngine/v17/ipch/AutoPCH/94748d8d1d94042a/MAIN.ipch
+.vs/2DGameEngine/v17/ipch/AutoPCH/ebdcb66f747550ca/GAME.ipch
