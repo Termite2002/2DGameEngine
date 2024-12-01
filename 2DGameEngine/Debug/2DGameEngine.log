@@ -1,22 +1,36 @@
 ﻿  Game.cpp
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4838:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4838:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4838:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4838:         ]
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4244:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4244:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4244:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,37): warning C4244:         ]
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4838:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4838:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4838:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4838:         ]
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4244:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4244:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4244:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Game.cpp(105,55): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(98,39): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(98,39): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(98,39): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(98,39): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(98,39): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(99,39): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(99,39): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(99,39): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(99,39): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(99,39): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4838:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4838:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4838:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4838:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,37): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4838: conversion from 'T' to 'int' requires a narrowing conversion
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4838:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4838:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4838:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4838:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(112,55): warning C4244:         ]
+  Logger.cpp
+E:\C++\2DGameEngine\2DGameEngine\src\Logger\Logger.cpp(12,10): warning C4101: 'timeinfo': unreferenced local variable
+  Main.cpp
+  Generating Code...
   2DGameEngine.vcxproj -> E:\C++\2DGameEngine\Debug\2DGameEngine.exe
