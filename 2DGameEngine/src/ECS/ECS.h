@@ -3,6 +3,7 @@
 
 #include <bitset>
 #include <vector>
+#include <set>
 #include <unordered_map>
 #include <typeindex>
 
@@ -65,6 +66,7 @@ class System {
 		template <typename TComponent> void RequireComponent();
 };
 
+
 /// <summary>
 /// Pool
 /// A pool is just a vector (continous data) of objects of type T
@@ -125,34 +127,82 @@ class Pool:public IPool {
 /// adding systems and adding components to entities
 /// </summary>
 class Registry {
-	private:
-		int numEntities = 0;
+private:
+	// Keep track of how many entities were added to the scene
+	int numEntities = 0;
 
-		// Vector of component pools, each pool contains all the data for a certain component type
-		// Vector index = component type id
-		// Pool index == entity id
-		std::vector<IPool*> componentPools;
+	// Vector of component pools, 
+	// each pool contains all the data for a certain component type
+	// Vector index = component type id
+	// Pool index == entity id
+	std::vector<IPool*> componentPools;
 
-		// Vector of component signatures per entity, saying which component is turned "on" for a given entity
-		// [Vector index = entity id]
-		std::vector<Signature> entityComponentSignatures;
+	// Vector of component signatures per entity, saying which component is turned "on" for a given entity
+	// [Vector index = entity id]
+	std::vector<Signature> entityComponentSignatures;
 
-		std::unordered_map<std::type_index, System*> systems;
+	// Map of active system [ index = system id ]
+	std::unordered_map<std::type_index, System*> systems;
 
-	public:
-		Registry() = default;
+	// Set of entities that are flagged to be added or removed in the next Update()
+	std::set<Entity> entitiesToBeAdded;
+	std::set<Entity> entitiesToBeKilled;
 
-		// TODO:
-		// 
-		// createEntity
-		// 
-		// addComponent, removeComponent
+public:
+	Registry() = default;
 
-		// GetComponent
+	void Update();
 
-		// add system()
+	Entity CreateEntity();
+	// Entity Management
+	void AddEntityToSystem(Entity entity);
+
+	// Component management
+	template <typename TComponent, typename ...TArgs> void AddComponent(Entity entity, TArgs&& ...args);
+
+
+	// TODO:
+	// Kill
+	// removeComponent
+
+	// GetComponent
+
+	// add system()
+
+	// update: add/remove
 
 };
+
+template <typename TComponent>
+void System::RequireComponent() {
+	const auto componentId = Component<TComponent>::GetId();
+	componentSignature.set(componentId);
+}
+
+template <typename TComponent, typename ...TArgs>
+void Registry::AddComponent(Entity entity, TArgs&& ...args) {
+	const auto componentId = Component<TComponent>:GetId();
+	const auto entityId = entity.GetId();
+
+	if (componentId >= componentPools.size()) {
+		componentPools.resize(componentId + 1, nullptr);
+	}
+
+	if (!componentPools[componentId]) {
+		Pool<TComponent>* newComponentPool = new Pool<TComponent>();
+		componentPools[componentId] = newComponentPool;
+	}
+
+	Pool<TComponent>* componentPool = componentPools[componentId];
+	if (entityId >= componentPool->GetSize()) {
+		componentPool->Resize(numEntities)
+	}
+
+	TComponent newComponent(std::forward<TArgs>(args)...);
+
+	componentPool->Set(entityId, newComponent);
+	entityComponentSignatures[entityId].set(componentId;)
+}
 
 
 #endif 

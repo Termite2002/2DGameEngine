@@ -1,4 +1,5 @@
 #include "ECS.h"
+#include "../Logger/Logger.h"
 
 int Entity::GetId() const {
 	return id;
@@ -19,8 +20,20 @@ const Signature& System::GetComponentSignature() const {
 	return componentSignature;
 }
 
-template <typename TComponent>
-void System::RequireComponent() {
-	const auto componentId = Component<TComponent>::GetId();
-	componentSignature.set(componentId);
+
+Entity Registry::CreateEntity() { 
+	int entityId;
+	entityId = numEntities++;
+
+	Entity entity(entityId);
+	entitiesToBeAdded.insert(entity);
+
+	Logger::Log("entity created with id = " + std::to_string(entityId));
+
+	return entity;
+}
+
+void Registry::Update() {
+	// TODO: Add the entities that are waiting to be created to the active Systems
+	// TODO: Remove the entities that are waiting to be killed from the active Systems
 }
