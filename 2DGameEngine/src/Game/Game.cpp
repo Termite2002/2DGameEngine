@@ -1,6 +1,15 @@
 #include "Game.h" 
 #include "../Logger/Logger.h"
 #include "../ECS/ECS.h"
+
+
+#include "../Components/TransformComponent.h"
+#include "../Components/RigidBodyComponent.h"
+#include "../Components/SpriteComponent.h"
+
+#include "../Systems/MovementSystem.h"
+#include "../Systems/RenderSystem.h"
+
 #include <SDL.h>
 #include <SDL_image.h>
 #include <glm/glm.hpp>
@@ -9,6 +18,7 @@
 
 Game::Game() {
 	isRunning = false;
+	registry = std::make_unique<Registry>();
 	Logger::Log("Game constructor called!");
 }
 
@@ -76,13 +86,23 @@ void Game::ProcessInput() {
 }
 
 
- 
+// ~ Start in Unity
 void Game::Setup() {
-	// TODO:
-	// Entity tank = regitry.CreateEntity();
-	// tank.AddComponent<TransformComponent>();
-	// tank.AddComponent<BoxColliderComponent>();
-	// tank.AddComponent<SpriteComponent>("./assets/images/tank.png");
+	// Add the systems that need to be processed in game
+	registry->AddSystem<MovementSystem>();
+	registry->AddSystem<RenderSystem>();
+
+	// Create an entity
+	Entity tank = registry->CreateEntity();
+	tank.AddComponent<TransformComponent>(glm::vec2(10.0, 30.0), glm::vec2(1.0, 1.0), 0.0);
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(10.0, 20.0));
+	tank.AddComponent<SpriteComponent>(10, 10);
+
+	Entity tank2 = registry->CreateEntity();
+	tank2.AddComponent<TransformComponent>(glm::vec2(400.0, 30.0), glm::vec2(1.0, 1.0), 0.0);
+	tank2.AddComponent<RigidBodyComponent>(glm::vec2(1.0, 5.0));
+	tank2.AddComponent<SpriteComponent>(20, 50);
+
 }
 
 void Game::Update() {
@@ -98,16 +118,19 @@ void Game::Update() {
 	// Store the current frame time
 	millisecsPreviousFrame = SDL_GetTicks();
 
-	// TODO: 
-	// MovementSystem.Update();
-	// CollisionSystem.Update();
+	// Update the systems
+	registry->GetSystem<MovementSystem>().Update(deltaTime);
+
+	// Update the registry to process the entities that are waiting to be created/deleted
+	registry->Update();
 }
 
 void Game::Render() {
 	SDL_SetRenderDrawColor(renderer, 21, 21, 21, 255);
 	SDL_RenderClear(renderer);
 
-	// TODO: render system
+	// Invoke all systems render
+	registry->GetSystem<RenderSystem>().Update(renderer);
 
 	SDL_RenderPresent(renderer);
 }

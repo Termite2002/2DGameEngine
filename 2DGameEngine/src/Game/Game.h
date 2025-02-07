@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "../ECS/ECS.h"
 #include <SDL.h>
 
 
@@ -14,7 +15,7 @@ class Game {
 		SDL_Window* window;
 		SDL_Renderer* renderer;
 
-
+		std::unique_ptr<Registry> registry;
 
 	public:
 		Game();

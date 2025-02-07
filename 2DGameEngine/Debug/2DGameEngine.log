@@ -1,4 +1,29 @@
-﻿  ECS.cpp
-  Game.cpp
-  Generating Code...
+﻿  Game.cpp
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         ]
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         ]
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file 'src/Game/Game.cpp')
+  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18):
+  the template instantiation context (the oldest one first) is
+  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(97,6):
+  	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2,glm::vec2,double>(glm::vec2 &&,glm::vec2 &&,double &&)' being compiled
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(298,10):
+  	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,_Ty,_Ty,double>(Entity,_Ty &&,_Ty &&,double &&)' being compiled
+          with
+          [
+              _Ty=glm::vec2
+          ]
+  
   2DGameEngine.vcxproj -> E:\C++\2DGameEngine\Debug\2DGameEngine.exe
