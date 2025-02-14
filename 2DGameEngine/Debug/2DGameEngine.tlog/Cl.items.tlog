@@ -4,6 +4,7 @@ E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_demo.cpp;E:\C++\2DGameEngine\2
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_draw.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_draw.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_sdl.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_sdl.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_widgets.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_widgets.obj
+E:\C++\2DGameEngine\2DGameEngine\src\AssetStore\AssetStore.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\AssetStore.obj
 E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\ECS.obj
 E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\Game.obj
 E:\C++\2DGameEngine\2DGameEngine\src\Logger\Logger.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\Logger.obj

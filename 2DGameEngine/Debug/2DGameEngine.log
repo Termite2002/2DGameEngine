@@ -17,7 +17,7 @@ E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18): warning C4018: '>=': sig
   (compiling source file 'src/Game/Game.cpp')
   E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18):
   the template instantiation context (the oldest one first) is
-  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(97,6):
+  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(135,8):
   	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2,glm::vec2,double>(glm::vec2 &&,glm::vec2 &&,double &&)' being compiled
   	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(298,10):
   	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,_Ty,_Ty,double>(Entity,_Ty &&,_Ty &&,double &&)' being compiled
@@ -26,4 +26,6 @@ E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18): warning C4018: '>=': sig
               _Ty=glm::vec2
           ]
   
+  Main.cpp
+  Generating Code...
   2DGameEngine.vcxproj -> E:\C++\2DGameEngine\Debug\2DGameEngine.exe
