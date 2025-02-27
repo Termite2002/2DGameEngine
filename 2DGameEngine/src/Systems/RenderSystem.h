@@ -15,7 +15,7 @@ public:
 		RequireComponent<SpriteComponent>();
 	}
 
-	void Update(SDL_Renderer* renderer, std::unique_ptr<AssetStore>& assetStore) {
+	void Update(SDL_Renderer* renderer, std::unique_ptr<AssetStore>& assetStore, SDL_Rect& camera) {
 
 		// Sort all the entities by z-index
 
@@ -49,8 +49,8 @@ public:
 
 			// Set the destination rectangle with the x,y positon to be rendered
 			SDL_Rect dstRect = {
-				static_cast<int>(transform.position.x),
-				static_cast<int>(transform.position.y),
+				static_cast<int>(transform.position.x - camera.x),
+				static_cast<int>(transform.position.y - camera.y),
 				static_cast<int>(sprite.width * transform.scale.x),
 				static_cast<int>(sprite.height * transform.scale.y)
 			};

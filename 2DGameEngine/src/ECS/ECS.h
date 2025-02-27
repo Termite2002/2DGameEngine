@@ -5,6 +5,7 @@
 #include <bitset>
 #include <vector>
 #include <set>
+#include <deque>
 #include <unordered_map>
 #include <typeindex>
 #include <memory>
@@ -43,6 +44,7 @@ class Entity {
 	public:
 		Entity(int id) : id(id) {};
 		Entity(const Entity& entity) = default;
+		void Kill();
 		int GetId() const;
 
 		Entity& operator =(const Entity& other) = default;
@@ -167,6 +169,9 @@ private:
 	std::set<Entity> entitiesToBeAdded;
 	std::set<Entity> entitiesToBeKilled;
 
+	// List of free entity ids that were previously removed
+	std::deque<int> freeIds;
+
 public:
 	Registry() {
 		Logger::Log("Registry constructer called");
@@ -181,6 +186,7 @@ public:
 
 	// Entity management
 	Entity CreateEntity();
+	void KillEntity(Entity entity);
 
 
 	// Component management
@@ -195,9 +201,10 @@ public:
 	template <typename TSystem> bool HasSystem() const;
 	template <typename TSystem> TSystem& GetSystem() const;
 
-	// Check the component signature pf an entity and add the entity to the systems
-	// that are isterested in it
+
+	// Add and remove entities from their systems
 	void AddEntityToSystems(Entity entiy);
+	void RemoveEntityFromSystems(Entity entity);
 
 };
 

@@ -13,13 +13,29 @@ E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4
 E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         ]
   (compiling source file 'src/Game/Game.cpp')
   
-E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18): warning C4018: '>=': signed/unsigned mismatch
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244:         ]
   (compiling source file 'src/Game/Game.cpp')
-  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(244,18):
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244:         ]
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(164,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(165,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(251,18): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file 'src/Game/Game.cpp')
+  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(251,18):
   the template instantiation context (the oldest one first) is
-  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(135,8):
+  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(156,8):
   	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2,glm::vec2,double>(glm::vec2 &&,glm::vec2 &&,double &&)' being compiled
-  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(298,10):
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(305,10):
   	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,_Ty,_Ty,double>(Entity,_Ty &&,_Ty &&,double &&)' being compiled
           with
           [
