@@ -27,21 +27,25 @@ E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warn
 E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(29,38): warning C4244:         ]
   (compiling source file 'src/Game/Game.cpp')
   
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(164,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(165,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileEmitSystem.h(81,61): warning C4018: '>': signed/unsigned mismatch
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileLifeCycleSystem.h(17,47): warning C4018: '>': signed/unsigned mismatch
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(171,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(172,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(251,18): warning C4018: '>=': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
   E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(251,18):
   the template instantiation context (the oldest one first) is
-  	E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(156,8):
-  	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2,glm::vec2,double>(glm::vec2 &&,glm::vec2 &&,double &&)' being compiled
+  	E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileEmitSystem.h(60,17):
+  	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2&,glm::vec2,double>(glm::vec2 &,glm::vec2 &&,double &&)' being compiled
   	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(305,10):
-  	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,_Ty,_Ty,double>(Entity,_Ty &&,_Ty &&,double &&)' being compiled
+  	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,glm::vec2&,_Ty,double>(Entity,glm::vec2 &,_Ty &&,double &&)' being compiled
           with
           [
               _Ty=glm::vec2
           ]
   
-  Main.cpp
-  Generating Code...
   2DGameEngine.vcxproj -> E:\C++\2DGameEngine\Debug\2DGameEngine.exe
