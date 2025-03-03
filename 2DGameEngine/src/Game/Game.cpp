@@ -160,6 +160,7 @@ void Game::LoadLevel(int level) {
 			Logger::Log("SRC X = " + std::to_string(srcRectX) + " Y = " + std::to_string(srcRectY));
 
 			Entity tile = registry->CreateEntity();
+			tile.Group("tiles");
 			tile.AddComponent<TransformComponent>(glm::vec2(x * (tileSize * tileScale), y * (tileSize * tileScale)), 
 												  glm::vec2(tileScale, tileScale),	
 												  0.0);
@@ -173,11 +174,13 @@ void Game::LoadLevel(int level) {
 
 
 	Entity chopper = registry->CreateEntity();
+	chopper.Tag("player");
 	chopper.AddComponent<TransformComponent>(glm::vec2(100.0, 100.0), glm::vec2(1.0, 1.0), 0.0);
 	chopper.AddComponent<RigidBodyComponent>(glm::vec2(0.0, 0));
 	chopper.AddComponent<SpriteComponent>("chopper-image", 32, 32, 1);
 	chopper.AddComponent<AnimationComponent>(2, 10, true);
-	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(250.0, 250.0), 0, 10000, 0, true);
+	chopper.AddComponent<BoxColliderComponent>(32, 32);
+	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(250.0, 250.0), 0, 10000, 10, true);
 	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -150), glm::vec2(150, 0), glm::vec2(0, 150), glm::vec2(-150, 0));
 	chopper.AddComponent<CameraFollowComponent>();
 	chopper.AddComponent<HealthComponent>(100);
@@ -190,19 +193,21 @@ void Game::LoadLevel(int level) {
 
 	// Create an entity
 	Entity tank = registry->CreateEntity();
+	tank.Group("enemies");
 	tank.AddComponent<TransformComponent>(glm::vec2(500.0, 10.0), glm::vec2(1.0, 1.0), 0.0);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(0, 0));
 	tank.AddComponent<SpriteComponent>("tank-image", 32, 32, 2);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
-	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 5000, 3000, 0, false);
+	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 5000, 3000, 10, false);
 	tank.AddComponent<HealthComponent>(100);
 
 	Entity truck = registry->CreateEntity();
+	truck.Group("enemies");
 	truck.AddComponent<TransformComponent>(glm::vec2(10.0, 10.0), glm::vec2(1.0, 1.0), 0.0);
 	truck.AddComponent<RigidBodyComponent>(glm::vec2(0, 0));
 	truck.AddComponent<SpriteComponent>("truck-image", 32, 32, 1);
 	truck.AddComponent<BoxColliderComponent>(32, 32);
-	truck.AddComponent<ProjectileEmitterComponent>(glm::vec2(0, 100.0), 2000, 5000, 0, false);
+	truck.AddComponent<ProjectileEmitterComponent>(glm::vec2(0, 100.0), 2000, 5000, 10, false);
 	truck.AddComponent<HealthComponent>(100);
 
 	//tank.Kill();
