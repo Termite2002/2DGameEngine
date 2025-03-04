@@ -861,6 +861,15 @@
     <ClInclude Include="src\Components\HealthComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Components\TextLabelComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderTextSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderHealthBarSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="libs\glm\detail\func_common.inl">
@@ -1294,5 +1303,8 @@
     <ClCompile Include="src\AssetStore\AssetStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="C:\Users\pc\Downloads\linh tinh game\my ass\pico-8\pico-8.ttf" />
   </ItemGroup>
 </Project>

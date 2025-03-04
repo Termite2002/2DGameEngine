@@ -12,6 +12,7 @@
 #include "../Components/CameraFollowComponent.h"
 #include "../Components/ProjectileEmitterComponent.h"
 #include "../Components/HealthComponent.h"
+#include "../Components/TextLabelComponent.h"
 
 #include "../Systems/MovementSystem.h"
 #include "../Systems/RenderSystem.h"
@@ -23,6 +24,9 @@
 #include "../Systems/CameraMovementSystem.h"
 #include "../Systems/ProjectileEmitSystem.h"
 #include "../Systems/ProjectileLifeCycleSystem.h"
+#include "../Systems/RenderTextSystem.h"
+#include "../Systems/RenderHealthBarSystem.h"
+
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -51,6 +55,11 @@ Game::~Game() {
 void Game::Initialize() {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
 		Logger::Err("Error init SDL");
+		return;
+	}
+
+	if (TTF_Init() != 0) {
+		Logger::Err("Error init SDL TTF");
 		return;
 	}
 
@@ -131,6 +140,8 @@ void Game::LoadLevel(int level) {
 	registry->AddSystem<CameraMovementSystem>();
 	registry->AddSystem<ProjectileEmitSystem>();
 	registry->AddSystem<ProjectileLifeCycleSystem>();
+	registry->AddSystem<RenderTextSystem>();
+	registry->AddSystem<RenderHealthBarSystem>();
 
 	// Adding assets to the asset store
 	assetStore->AddTexture(renderer, "tank-image", "./assets/images/tank-panther-right.png");
@@ -139,6 +150,10 @@ void Game::LoadLevel(int level) {
 	assetStore->AddTexture(renderer, "radar-image", "./assets/images/radar.png");
 	assetStore->AddTexture(renderer, "tilemap-image", "./assets/tilemaps/jungle.png");
 	assetStore->AddTexture(renderer, "bullet-image", "./assets/images/bullet.png");
+
+	assetStore->AddFont("charriot-font", "./assets/fonts/charriot.ttf", 14);
+	assetStore->AddFont("pico8-font-5", "./assets/fonts/pico-8.ttf", 5);
+	assetStore->AddFont("pico8-font-10", "./assets/fonts/pico-8.ttf", 10);
 
 	// Load the tilemap
 	int tileSize = 32;
@@ -181,7 +196,7 @@ void Game::LoadLevel(int level) {
 	chopper.AddComponent<AnimationComponent>(2, 10, true);
 	chopper.AddComponent<BoxColliderComponent>(32, 32);
 	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(250.0, 250.0), 0, 10000, 10, true);
-	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -150), glm::vec2(150, 0), glm::vec2(0, 150), glm::vec2(-150, 0));
+	chopper.AddComponent<KeyboardControlComponent>(glm::vec2(0, -100), glm::vec2(100, 0), glm::vec2(0, 100), glm::vec2(-100, 0));
 	chopper.AddComponent<CameraFollowComponent>();
 	chopper.AddComponent<HealthComponent>(100);
 
@@ -194,22 +209,25 @@ void Game::LoadLevel(int level) {
 	// Create an entity
 	Entity tank = registry->CreateEntity();
 	tank.Group("enemies");
-	tank.AddComponent<TransformComponent>(glm::vec2(500.0, 10.0), glm::vec2(1.0, 1.0), 0.0);
+	tank.AddComponent<TransformComponent>(glm::vec2(1000.0, 165.0), glm::vec2(1.0, 1.0), 0.0);
 	tank.AddComponent<RigidBodyComponent>(glm::vec2(0, 0));
 	tank.AddComponent<SpriteComponent>("tank-image", 32, 32, 2);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
-	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 5000, 3000, 10, false);
+	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 3000, 5000, 15, false);
 	tank.AddComponent<HealthComponent>(100);
 
 	Entity truck = registry->CreateEntity();
 	truck.Group("enemies");
-	truck.AddComponent<TransformComponent>(glm::vec2(10.0, 10.0), glm::vec2(1.0, 1.0), 0.0);
+	truck.AddComponent<TransformComponent>(glm::vec2(150.0, 630.0), glm::vec2(1.0, 1.0), 0.0);
 	truck.AddComponent<RigidBodyComponent>(glm::vec2(0, 0));
 	truck.AddComponent<SpriteComponent>("truck-image", 32, 32, 1);
 	truck.AddComponent<BoxColliderComponent>(32, 32);
-	truck.AddComponent<ProjectileEmitterComponent>(glm::vec2(0, 100.0), 2000, 5000, 10, false);
+	truck.AddComponent<ProjectileEmitterComponent>(glm::vec2(0, -100), 2000, 5000, 10, false);
 	truck.AddComponent<HealthComponent>(100);
 
+	Entity label = registry->CreateEntity();
+	SDL_Color green = { 0,255,0 };
+	label.AddComponent<TextLabelComponent>(glm::vec2(windowWidth / 2 - 125 , 10), "GAME ENGINE 2D --- VER 1.0", "charriot-font", green, true);
 	//tank.Kill();
 }
 
@@ -258,6 +276,9 @@ void Game::Render() {
 
 	// Invoke all systems render
 	registry->GetSystem<RenderSystem>().Update(renderer, assetStore, camera);
+	registry->GetSystem<RenderTextSystem>().Update(renderer, assetStore, camera);
+	registry->GetSystem<RenderHealthBarSystem>().Update(renderer, assetStore, camera);
+
 	if (isDebug) {
 		registry->GetSystem<RenderColliderSystem>().Update(renderer, camera);
 	}

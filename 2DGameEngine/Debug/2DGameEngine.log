@@ -33,19 +33,36 @@ E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileEmitSystem.h(82,61): warn
 E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileLifeCycleSystem.h(17,47): warning C4018: '>': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
   
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(172,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(173,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(276,18): warning C4018: '>=': signed/unsigned mismatch
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(187,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(188,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18): warning C4018: '>=': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
-  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(276,18):
+  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18):
   the template instantiation context (the oldest one first) is
   	E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileEmitSystem.h(61,17):
   	see reference to function template instantiation 'void Entity::AddComponent<TransformComponent,glm::vec2&,glm::vec2,double>(glm::vec2 &,glm::vec2 &&,double &&)' being compiled
-  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(330,10):
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(384,10):
   	see reference to function template instantiation 'void Registry::AddComponent<TransformComponent,glm::vec2&,_Ty,double>(Entity,glm::vec2 &,_Ty &&,double &&)' being compiled
           with
           [
               _Ty=glm::vec2
           ]
+  
+E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(159,15): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file 'src/Game/Game.cpp')
+  E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(159,15):
+  the template instantiation context (the oldest one first) is
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(384,10):
+  	see reference to function template instantiation 'void Registry::AddComponent<CameraFollowComponent,>(Entity)' being compiled
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(331,58):
+  	see reference to class template instantiation 'Pool<CameraFollowComponent>' being compiled
+  	E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(148,8):
+  	while compiling class template member function 'void Pool<CameraFollowComponent>::Set(int,T)'
+          with
+          [
+              T=CameraFollowComponent
+          ]
+  		E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(339,20):
+  		see the first reference to 'Pool<CameraFollowComponent>::Set' in 'Registry::AddComponent'
   
   2DGameEngine.vcxproj -> E:\C++\2DGameEngine\Debug\2DGameEngine.exe

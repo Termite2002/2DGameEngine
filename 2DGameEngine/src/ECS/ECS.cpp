@@ -119,9 +119,6 @@ bool Registry::EntityHasTag(Entity entity, const std::string& tag) const {
 	if (tagPerEntity.find(entity.GetId()) == tagPerEntity.end()) {
 		return false;
 	}
-	if (entityPerTag.find(tag) == entityPerTag.end()) {
-		return false;
-	}
 	return entityPerTag.find(tag)->second == entity;
 }
 
@@ -145,7 +142,7 @@ void Registry::GroupEntity(Entity entity, const std::string& group) {
 }
 
 bool Registry::EntityBelongsToGroup(Entity entity, const std::string& group) const {
-	if (entitiesPerGroup.find(group) != entitiesPerGroup.end()) {
+	if (entitiesPerGroup.find(group) == entitiesPerGroup.end()) {
 		return false;
 	}
 
@@ -185,6 +182,13 @@ void Registry::Update() {
 		RemoveEntityFromSystems(entity);
 
 		entityComponentSignatures[entity.GetId()].reset();
+
+		// Remove the entity from all component pools
+		for (auto pool : componentPools) {
+			if (pool) {
+				pool->RemoveEntityFromPool(entity.GetId());
+			}
+		}
 
 		// Make the entity id available to be reused
 		freeIds.push_back(entity.GetId());
