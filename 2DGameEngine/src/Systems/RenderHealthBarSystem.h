@@ -64,6 +64,8 @@ class RenderHealthBarSystem : public System {
 
 				int labelWidth = 0;
 				int labelHeight = 0;
+				
+		
 
 				SDL_QueryTexture(texture, NULL, NULL, &labelWidth, &labelHeight);
 
@@ -73,6 +75,7 @@ class RenderHealthBarSystem : public System {
 					labelWidth,
 					labelHeight
 				};
+
 
 				SDL_RenderCopy(renderer, texture, NULL, &healthBarTextRectangle);
 

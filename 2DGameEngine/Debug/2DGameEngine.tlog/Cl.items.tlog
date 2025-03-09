@@ -2,6 +2,7 @@ E:\C++\2DGameEngine\2DGameEngine\libs\glm\detail\glm.cpp;E:\C++\2DGameEngine\2DG
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_demo.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_demo.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_draw.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_draw.obj
+E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_impl_sdl.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_impl_sdl.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_sdl.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_sdl.obj
 E:\C++\2DGameEngine\2DGameEngine\libs\imgui\imgui_widgets.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\imgui_widgets.obj
 E:\C++\2DGameEngine\2DGameEngine\src\AssetStore\AssetStore.cpp;E:\C++\2DGameEngine\2DGameEngine\Debug\AssetStore.obj

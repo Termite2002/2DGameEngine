@@ -33,8 +33,13 @@ E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileEmitSystem.h(82,61): warn
 E:\C++\2DGameEngine\2DGameEngine\src\Systems\ProjectileLifeCycleSystem.h(17,47): warning C4018: '>': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
   
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(187,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(188,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\RenderGUISystem.h(96,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'src/Game/Game.cpp')
+  
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(128,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(128,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(209,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(210,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18): warning C4018: '>=': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
   E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18):
