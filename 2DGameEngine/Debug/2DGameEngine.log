@@ -1,16 +1,16 @@
 ﻿  Game.cpp
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(23,50): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(62,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(62,50): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(62,50): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(62,50): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(62,50): warning C4244:         ]
   (compiling source file 'src/Game/Game.cpp')
   
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         with
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         [
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:             T=float
-E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(24,50): warning C4244:         ]
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(63,50): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(63,50): warning C4244:         with
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(63,50): warning C4244:         [
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(63,50): warning C4244:             T=float
+E:\C++\2DGameEngine\2DGameEngine\src\Systems\MovementSystem.h(63,50): warning C4244:         ]
   (compiling source file 'src/Game/Game.cpp')
   
 E:\C++\2DGameEngine\2DGameEngine\src\Systems\CameraMovementSystem.h(25,38): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
@@ -38,8 +38,8 @@ E:\C++\2DGameEngine\2DGameEngine\src\Systems\RenderGUISystem.h(96,47): warning C
   
 E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(128,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(128,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(209,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(210,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(210,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\C++\2DGameEngine\2DGameEngine\src\Game\Game.cpp(211,36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18): warning C4018: '>=': signed/unsigned mismatch
   (compiling source file 'src/Game/Game.cpp')
   E:\C++\2DGameEngine\2DGameEngine\src\ECS\ECS.h(326,18):

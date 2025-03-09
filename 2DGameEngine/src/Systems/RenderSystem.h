@@ -29,6 +29,15 @@ public:
 			RenderableEntity renderableEntity;
 			renderableEntity.spriteComponent = entity.GetComponent<SpriteComponent>();
 			renderableEntity.transformComponent = entity.GetComponent<TransformComponent>();
+
+			// Check if the entity is within the camera view
+			if ((renderableEntity.transformComponent.position.x + (renderableEntity.spriteComponent.width * renderableEntity.transformComponent.scale.x) < camera.x ||
+				renderableEntity.transformComponent.position.y + (renderableEntity.spriteComponent.height * renderableEntity.transformComponent.scale.y) < camera.y ||
+				renderableEntity.transformComponent.position.x > camera.x + camera.w ||
+				renderableEntity.transformComponent.position.y > camera.y + camera.h) && !renderableEntity.spriteComponent.isFixed) {
+				continue;
+			}
+
 			renderableEntities.emplace_back(renderableEntity);
 		}
 
@@ -62,7 +71,7 @@ public:
 				&dstRect,
 				transform.rotation,
 				NULL,
-				SDL_FLIP_NONE
+				sprite.flip
 			);
 		}
 

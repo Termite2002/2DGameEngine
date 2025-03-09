@@ -168,6 +168,7 @@ void Game::LoadLevel(int level) {
 	// Adding assets to the asset store
 	assetStore->AddTexture(renderer, "tank-image", "./assets/images/tank-panther-right.png");
 	assetStore->AddTexture(renderer, "truck-image", "./assets/images/truck-ford-right.png");
+	assetStore->AddTexture(renderer, "tree-image", "./assets/images/tree.png");
 	assetStore->AddTexture(renderer, "chopper-image", "./assets/images/chopper-spritesheet.png");
 	assetStore->AddTexture(renderer, "radar-image", "./assets/images/radar.png");
 	assetStore->AddTexture(renderer, "tilemap-image", "./assets/tilemaps/jungle.png");
@@ -214,7 +215,7 @@ void Game::LoadLevel(int level) {
 	chopper.Tag("player");
 	chopper.AddComponent<TransformComponent>(glm::vec2(100.0, 100.0), glm::vec2(1.0, 1.0), 0.0);
 	chopper.AddComponent<RigidBodyComponent>(glm::vec2(0.0, 0));
-	chopper.AddComponent<SpriteComponent>("chopper-image", 32, 32, 1);
+	chopper.AddComponent<SpriteComponent>("chopper-image", 32, 32, 4);
 	chopper.AddComponent<AnimationComponent>(2, 10, true);
 	chopper.AddComponent<BoxColliderComponent>(32, 32);
 	chopper.AddComponent<ProjectileEmitterComponent>(glm::vec2(250.0, 250.0), 0, 10000, 10, true);
@@ -231,11 +232,11 @@ void Game::LoadLevel(int level) {
 	// Create an entity
 	Entity tank = registry->CreateEntity();
 	tank.Group("enemies");
-	tank.AddComponent<TransformComponent>(glm::vec2(1000.0, 165.0), glm::vec2(1.0, 1.0), 0.0);
-	tank.AddComponent<RigidBodyComponent>(glm::vec2(0, 0));
+	tank.AddComponent<TransformComponent>(glm::vec2(1050.0, 165.0), glm::vec2(1.0, 1.0), 0.0);
+	tank.AddComponent<RigidBodyComponent>(glm::vec2(20, 0));
 	tank.AddComponent<SpriteComponent>("tank-image", 32, 32, 2);
 	tank.AddComponent<BoxColliderComponent>(32, 32);
-	tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 3000, 5000, 15, false);
+	//tank.AddComponent<ProjectileEmitterComponent>(glm::vec2(100.0, 0.0), 3000, 5000, 15, false);
 	tank.AddComponent<HealthComponent>(100);
 
 	Entity truck = registry->CreateEntity();
@@ -246,6 +247,18 @@ void Game::LoadLevel(int level) {
 	truck.AddComponent<BoxColliderComponent>(32, 32);
 	truck.AddComponent<ProjectileEmitterComponent>(glm::vec2(0, -100), 2000, 5000, 10, false);
 	truck.AddComponent<HealthComponent>(100);
+
+	Entity treeA = registry->CreateEntity();
+	treeA.Group("obstacles");
+	treeA.AddComponent<TransformComponent>(glm::vec2(1200, 165.0), glm::vec2(1.0, 1.0), 0.0);
+	treeA.AddComponent<SpriteComponent>("tree-image", 16, 32, 2);
+	treeA.AddComponent<BoxColliderComponent>(16, 32);
+
+	Entity treeB = registry->CreateEntity();
+	treeB.Group("obstacles");
+	treeB.AddComponent<TransformComponent>(glm::vec2(960, 165), glm::vec2(1.0, 1.0), 0.0);
+	treeB.AddComponent<SpriteComponent>("tree-image", 16, 32, 2);
+	treeB.AddComponent<BoxColliderComponent>(16, 32);
 
 	Entity label = registry->CreateEntity();
 	SDL_Color green = { 0,255,0 };
@@ -277,6 +290,7 @@ void Game::Update() {
 
 	// Perform the subcription of the events for all systems
 	registry->GetSystem<DamageSystem>().SubcribeToEvents(eventBus);
+	registry->GetSystem<MovementSystem>().SubscribeToEvents(eventBus);
 	registry->GetSystem<KeyboardControlSystem>().SubcribeToEvents(eventBus);
 	registry->GetSystem<ProjectileEmitSystem>().SubscribeToEvents(eventBus);
 

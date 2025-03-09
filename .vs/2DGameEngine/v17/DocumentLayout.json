@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "E:\\C\u002B\u002B\\2DGameEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderGUISystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|solutionrelative:2DGameEngine\\src\\Systems\\RenderGUISystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|solutionrelative:2DGameEngine\\src\\Systems\\RenderSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\MovementSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|solutionrelative:2DGameEngine\\src\\Systems\\MovementSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -13,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|solutionrelative:2DGameEngine\\src\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Components\\SpriteComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|solutionrelative:2DGameEngine\\src\\Components\\SpriteComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F673D58F-F04E-40AC-A045-25A17902E7A1}|2DGameEngine\\2DGameEngine.vcxproj|E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\ECS\\ECS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -35,19 +43,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RenderGUISystem.h",
-              "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderGUISystem.h",
-              "RelativeDocumentMoniker": "2DGameEngine\\src\\Systems\\RenderGUISystem.h",
-              "ToolTip": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderGUISystem.h",
-              "RelativeToolTip": "2DGameEngine\\src\\Systems\\RenderGUISystem.h",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACUAAAAJAAAA",
+              "Title": "RenderSystem.h",
+              "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderSystem.h",
+              "RelativeDocumentMoniker": "2DGameEngine\\src\\Systems\\RenderSystem.h",
+              "ToolTip": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\RenderSystem.h",
+              "RelativeToolTip": "2DGameEngine\\src\\Systems\\RenderSystem.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-09T06:43:36.256Z",
+              "WhenOpened": "2025-03-09T15:21:43.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "SpriteComponent.h",
+              "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Components\\SpriteComponent.h",
+              "RelativeDocumentMoniker": "2DGameEngine\\src\\Components\\SpriteComponent.h",
+              "ToolTip": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Components\\SpriteComponent.h",
+              "RelativeToolTip": "2DGameEngine\\src\\Components\\SpriteComponent.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-09T14:53:36.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovementSystem.h",
+              "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\MovementSystem.h",
+              "RelativeDocumentMoniker": "2DGameEngine\\src\\Systems\\MovementSystem.h",
+              "ToolTip": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Systems\\MovementSystem.h",
+              "RelativeToolTip": "2DGameEngine\\src\\Systems\\MovementSystem.h",
+              "ViewState": "AQIAACUAAAAAAAAAAAAMwEEAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-09T14:19:36.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ECS.cpp",
               "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\ECS\\ECS.cpp",
               "RelativeDocumentMoniker": "2DGameEngine\\src\\ECS\\ECS.cpp",
@@ -59,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ECS.h",
               "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\ECS\\ECS.h",
               "RelativeDocumentMoniker": "2DGameEngine\\src\\ECS\\ECS.h",
@@ -71,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Game.h",
               "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Game\\Game.h",
               "RelativeDocumentMoniker": "2DGameEngine\\src\\Game\\Game.h",
@@ -84,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Game.cpp",
               "DocumentMoniker": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Game\\Game.cpp",
               "RelativeDocumentMoniker": "2DGameEngine\\src\\Game\\Game.cpp",
               "ToolTip": "E:\\C\u002B\u002B\\2DGameEngine\\2DGameEngine\\src\\Game\\Game.cpp",
               "RelativeToolTip": "2DGameEngine\\src\\Game\\Game.cpp",
-              "ViewState": "AQIAACYBAAAAAAAAAAAjwDABAABBAAAA",
+              "ViewState": "AQIAANAAAAAAAAAAAAAowN0AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-26T04:33:29.089Z",
               "EditorCaption": ""
